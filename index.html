@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamzy AI</title>
+  <style>
+    body {
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 15px;
+    }
+    .box {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 25px;
+      background: #1e293b;
+      border-radius: 18px;
+    }
+    input {
+      width: 90%;
+      padding: 14px;
+      border-radius: 8px;
+      border: none;
+      margin: 15px 0;
+    }
+    button {
+      padding: 13px 25px;
+      background: #22c55e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>✨ Lamzy AI</h1>
+    <p>Your personal AI assistant</p>
+    <input id="question" placeholder="Ask Lamzy AI anything...">
+    <br>
+    <button onclick="askLamzy()">Ask Lamzy</button>
+    <p id="answer"></p>
+  </div>
+
+  <script>
+    function askLamzy() {
+      const question = document.getElementById("question").value.trim();
+      const answer = document.getElementById("answer");
+
+      if (!question) {
+        answer.textContent = "Please enter a question.";
+        return;
+      }
+
+      answer.textContent =
+        "Welcome to Lamzy AI! Your question is: " + question +
+        ". AI connection is not configured yet.";
+    }
+  </script>
+</body>
+</html>,
